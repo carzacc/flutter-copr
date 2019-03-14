@@ -5,7 +5,7 @@ Summary:        The Flutter mobile app development framework.
 
 License:        BSD
 URL:            https://flutter.dev/
-Source0:        https://github.com/flutter/flutter/
+Source0:        https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v%{version}-stable.tar.xz
 
 %description
 The Flutter mobile app development framework.
