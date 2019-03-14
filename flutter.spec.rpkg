@@ -1,7 +1,9 @@
-Name:       flutter
-Version:    1.2.1
+Name:    flutter
+Version: 1.2.1
+Release: 1%{?dist}
+License: BSD
 Summary:    The Flutter mobile app development framework.
-
+URL:            http://www.dartlang.org/
 Source: https://github.com/flutter/flutter/
 
 %description
