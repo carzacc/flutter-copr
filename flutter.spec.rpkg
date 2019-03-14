@@ -1,0 +1,18 @@
+Name:       flutter
+Version:    1.2.1
+Summary:    The Flutter mobile app development framework.
+
+Source: https://github.com/flutter/flutter/
+
+%description
+The Flutter mobile app development framework.
+
+%prep
+git clone https://github.com/flutter/flutter.git -b stable
+
+%build
+%install
+make install root=%{buildroot}
+
+%changelog
+{{{ git_changelog }}}
