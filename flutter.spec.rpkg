@@ -12,9 +12,9 @@ The Flutter mobile app development framework.
 Flutter allows developers to make cross-platform mobile apps with ease.
 
 %prep
-%autosetup -n flutter
+%autosetup
 
-%install 
+%install
 cp -r %{buildroot}/%{_exec_prefix} %{buildroot}
 mkdir -p %{buildroot}/etc
 touch %{buildroot}/etc/profile
