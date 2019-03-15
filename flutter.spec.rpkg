@@ -1,7 +1,7 @@
 Name:           flutter
 Version:        1.2.1
 Release:        1%{?dist}
-Summary:        The Flutter mobile app development framework.
+Summary:        Google's Flutter mobile app development framework.
 
 License:        BSD
 URL:            https://flutter.dev/
@@ -9,12 +9,16 @@ Source0:        https://storage.googleapis.com/flutter_infra/releases/stable/lin
 
 %description
 The Flutter mobile app development framework.
+Flutter allows developers to make cross-platform mobile apps with ease.
 
 %prep
-git clone https://github.com/flutter/flutter.git -b stable
+%autosetup -n flutter
 
-%install
-make install root=%{buildroot}
+%install 
+cp -r %{buildroot}/%{_exec_prefix} %{buildroot}
+mkdir -p %{buildroot}/etc
+touch %{buildroot}/etc/profile
+echo "EXPORT PATH=/flutter/bin:$PATH" >> %{buildroot}/etc/profile
 
 %changelog
 {{{ git_changelog }}}
